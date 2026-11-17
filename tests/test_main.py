@@ -5,5 +5,8 @@ class TestBalance(unittest.TestCase):
     def test_balance(self):
         self.assertEqual(calculate_balance(5000, 2000), 3000)
 
+    def test_intentional_failure(self):
+        self.assertEqual(calculate_balance(5000, 2000), 9999)
+
 if __name__ == "__main__":
     unittest.main()
